@@ -1,0 +1,871 @@
+/* Font collecton
+font-family: 'Diplomata', cursive;
+font-family: 'Astloch', cursive;
+font-family: 'Metal Mania', cursive;
+font-family: 'Barrio', cursive;
+font-family: 'Jolly Lodger', cursive;
+font-family: 'Autour One', cursive;
+font-family: 'Griffy', cursive;
+font-family: 'Trade Winds', cursive;
+font-family: 'Henny Penny', cursive;
+font-family: 'Nosifer', cursive;
+font-family: 'UnifrakturCook', cursive;
+font-family: 'Bungee Shade', cursive;
+font-family: 'Mountains of Christmas', cursive;
+font-family: 'Codystar', cursive;
+font-family: 'Finger Paint', cursive;
+font-family: 'Faster One', cursive;
+font-family: 'Sofia', cursive;
+font-family: 'IM Fell English SC', serif;
+font-family: 'Monofett', cursive;
+font-family: 'Gravitas One', cursive;
+*/
+
+.Diplomata {
+    font-family: 'Diplomata', cursive;
+}
+
+.Astloch{
+    font-family: 'Astloch', cursive;
+}
+.MetalMania{
+    font-family: 'Metal Mania', cursive;
+}
+
+.Barrio{
+    font-family: 'Barrio', cursive;
+}
+
+.JollyLodger{
+    font-family: 'Jolly Lodger', cursive;
+}
+
+.AutourOne{
+    font-family: 'Autour One', cursive;
+}
+
+.Griffy{
+    font-family: 'Griffy', cursive;
+}
+
+.TradeWinds{
+    font-family: 'Trade Winds', cursive;
+}
+
+.HennyPenny{
+    font-family: 'Henny Penny', cursive;
+}
+
+.Nosifer{
+    font-family: 'Nosifer', cursive;
+}
+
+.UnifrakturCook{
+    font-family: 'UnifrakturCook', cursive;
+}
+
+.BungeeShade{
+    font-family: 'Bungee Shade', cursive;
+}
+
+.MountainsofChristmas{
+    font-family: 'Mountains of Christmas', cursive;
+}
+
+.Codystar{
+    font-family: 'Codystar', cursive;
+}
+
+.FingerPaint{
+    font-family: 'Finger Paint', cursive;
+}
+
+.FasterOne{
+    font-family: 'Faster One', cursive;
+}
+
+.Sofia{
+    font-family: 'Sofia', cursive;
+}
+
+.IMFellEnglishSC{
+    font-family: 'IM Fell English SC', serif;
+}
+
+.Monofett{
+    font-family: 'Monofett', cursive;
+}
+
+.GravitasOne{
+    font-family: 'Gravitas One', cursive;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*************** Mobile First - no grid Support - Landscape ***************/
+
+/* **************************** 
+        General Styles 
+***************************** */
+body {
+    
+	background: #fdf5e8 url('../assets/imgs/black_paper.png');
+	/*color: #020a17; #fdf5e8;*/
+    margin: 0;
+    font-size: 16px;
+    line-height: 20px;
+    color: floralwhite;
+    overflow-x: hidden;
+    font-family: 'Autour One', cursive;
+}
+
+.content {
+    width: 100%;
+    margin: auto;
+    padding: 1em;
+}
+
+ul {
+    list-style: none;
+}
+
+
+input, textarea, select, button {
+  width : 150px;
+  margin: 0;
+
+  -webkit-box-sizing: border-box; /* For legacy WebKit based browsers */
+     -moz-box-sizing: border-box; /* For legacy (Firefox <29) Gecko based browsers */
+          box-sizing: border-box;
+}
+
+input[type=radio] {
+    display: inline-block;
+    width: 18%;
+}
+
+label {
+    padding: 12px 0px 12px 0;
+    display: block;
+
+}
+
+label.radio {
+    display: inline-block;
+    width: 80%;
+}
+
+.required{
+    color: #ca5182;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 60vw;
+    margin: auto;
+}
+
+form input, form textarea {
+    width:  90%;
+    margin: 0 auto 1rem auto;
+    
+}
+form label {
+    width: 90%;
+    text-align: left;
+    margin: 0 auto 0 auto;
+}
+
+
+/* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+#map {
+    height: 40vh;
+}
+
+
+/* **************************** 
+        Avatar Styles 
+***************************** */
+
+img.avatar.small {
+    height: 4rem;
+    /* width: 4rem; */
+    border-radius: 100%;
+}
+
+/* **************************** 
+        Text Styles 
+***************************** */
+h1{
+    font-family: 'Codystar', cursive;
+    padding: 0 2em;
+    color: white;
+    /* width: 100%; */
+    font-size: 8em;
+    margin: auto;
+    padding: 0.25em;
+}
+
+h4, h2, h3 {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    padding: 0 6rem;
+}
+
+hr {
+	border: none;
+    height: 1.4rem;
+    width: 100%;
+    background: url(../assets/imgs/hr.png) center center no-repeat;
+    margin: 2rem auto;
+}
+
+
+
+
+/* **************************** 
+        Button Styles 
+***************************** */
+
+.btn {
+    border: 2px solid #fdf5e8;
+    background-color: #3f3446;
+    color: black;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.outline {
+    border-color: #3f3446;
+    color: #fdf5e8;
+    border-radius: 0.5em;
+    padding: 0.8em;
+}
+
+.outline:hover {
+    border-color: #706677;
+}
+
+
+/* **************************** 
+        Main Banner Styles 
+***************************** */
+
+#banner {
+    height: 25rem;
+    background: url(../assets/imgs/readingWomanInBathWithBooks.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    width: 100vw;
+    font-family:'Codystar', cursive;
+    border-bottom: 0.5em black solid;
+}
+
+#banner a {
+    display: flex;
+    text-align: center;
+    font-family:'Codystar', cursive;
+    text-decoration: none;
+}
+
+
+/* **************************** 
+        Nav Styles 
+***************************** */
+
+#main-nav {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    min-height: 100vh;
+    
+    transition: left 0.66667s ease;
+    -webkit-transition: left 0.66667s ease;
+    -moz-transition: left 0.66667s ease;
+    -o-transition: left 0.66667s ease;
+}
+
+#main-menu {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 1em 0;
+    list-style: none;
+    
+    transition: left 0.66667s ease;
+    -webkit-transition: left 0.66667s ease;
+    -moz-transition: left 0.66667s ease;
+    -o-transition: left 0.66667s ease;
+}
+
+#menu-icon {
+    position: absolute;
+    top: 23.5rem;
+    left: 100%;
+    width: 48px;
+    height: 48px;
+    padding: 3px 0;
+    background: #3f3446;
+    border-radius: 0 6px 6px 0;
+    cursor: pointer;
+    
+    transition: left 0.66667s ease;
+    -webkit-transition: left 0.66667s ease;
+    -moz-transition: left 0.66667s ease;
+    -o-transition: left 0.66667s ease;
+}
+
+#menu-icon:hover {
+     background: #2d3142;
+}
+
+.icon-bar {
+    position: relative;
+    top: 0%;
+    width: 36px;
+    height: 6px;
+    margin: 6px;
+    background: #FFF;
+    border-radius: 2px;
+    
+    transition: all 0.66667s ease;
+    -webkit-transition: all 0.66667s ease;
+    -moz-transition: all 0.66667s ease;
+    -o-transition: all 0.66667s ease;
+}
+
+nav {
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*height: 40;*/
+    width: 100%;
+    /*position: fixed;
+    top: 0;*/
+    z-index: 1;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    font-size: x-large;
+    border-top: solid 0.25em black;
+}
+
+nav ul{
+    display: inline-flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+nav ul li {
+    width: fit-content;
+    /* flex:1; */
+    display: flex;
+    text-align: center;
+    margin: 0 0.5em;
+}
+
+nav ul li a {
+    font-family: 'Codystar', cursive;
+    font-size: medium;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #3f3446;
+    padding: 0.5em 1.5em;
+    overflow: hidden;
+    color: white;
+    text-decoration: none;
+    margin: -2em 0px 0px 0px;
+    -moz-border-radius: 5px 5px 0px 0px;
+    border-radius: 5px;
+    box-shadow: 0 0 6px white;
+    font-weight: 800;
+}
+
+nav ul li a:hover {
+	background: #706677;
+}
+
+nav ul li a:active {
+	background: #2d3142;
+}
+
+.selected {
+    -moz-border-radius: 5px 0px 0px 0px;
+    border-radius: 5px 0px 0px 0px;
+    background: #2D3142;
+}
+
+.selected:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-style: solid;
+    background: #020a17;
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.3), -1px 1px 1px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0 1px 1px rgba(0,0,0,0.3), -1px 1px 1px rgba(0,0,0,0.2);
+    box-shadow: 0 1px 1px rgba(0,0,0,0.3), -1px 1px 1px rgba(0,0,0,0.2);
+    /* Firefox 3.0 damage limitation */
+    display: block; width: 0;
+    border-width: 8px;
+    border-color: #171616 #171616 transparent transparent;
+    -moz-border-radius: 0 0 0 5px;
+    border-radius: 0 0 0 5px;
+}
+
+nav .icon-bar {
+    position: relative;
+    top: 0%;
+    width: 36px;
+    height: 6px;
+    margin: 6px;
+    background: #FFF;
+    border-radius: 2px;
+    
+    transition: all 0.66667s ease;
+    -webkit-transition: all 0.66667s ease;
+    -moz-transition: all 0.66667s ease;
+    -o-transition: all 0.66667s ease;
+}
+
+nav .active .icon-bar:first-child {
+    transform: rotate(45deg);
+    position: relative;
+    top: 29%;
+}
+nav .active .icon-bar:nth-child(2) {
+    opacity: 0;
+}
+
+nav .active .icon-bar:last-child {
+    transform: rotate(-45deg);
+    position: relative;
+    top: -28%;
+}
+
+/* *************************************** 
+        Sorting of Book List Styles 
+**************************************** */
+
+/******* headers and arrows for sorting books *******/
+.triangle-down{
+    width: 0; 
+    height: 0; 
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid #fff;
+}
+
+.triangle-up{
+    width: 0; 
+    height: 0; 
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid white;
+}
+
+
+.table button, .table input[type="submit"], .table input[type="reset"] {
+    background: none !important;
+    color: inherit;
+    border: none;
+    padding: 1em! important;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit !important;
+}
+
+.table {
+
+    margin: auto;
+
+}
+
+.table th{
+    text-align: left;
+    padding: 0.25em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.table tr{
+    display: flex;
+    justify-content: space-around;
+}
+.table td, .table th {
+    flex:1;
+    min-width:100px;
+    padding: 0.25em;
+}
+
+
+/* *************************************** 
+            Developer Info Styles 
+**************************************** */
+
+#developerDetails{
+    text-align: center;
+    margin: 2em 0;
+}
+
+#developerDetails ul {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+
+#developerDetails li a img {
+    height: 1.4em;
+    margin: 0 0.4em;
+}
+
+/* *************************************** 
+            Meet up Styles 
+**************************************** */
+#attendance {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    width: 40vw;
+    margin: auto;
+    text-align: center;
+}
+
+/* *************************************** 
+            Notice Board Styles 
+**************************************** */
+
+#noticeboard {
+    text-align: center;
+}
+
+.notice {
+    padding: 1em;
+    border: solid white 0.15rem;
+    background: #7066775e;
+    position: relative;
+}
+
+.pin {
+    display: block;
+    background: white;
+    border-radius: 100%;
+    HEIGHT: 1.4rem;
+    width: 1.4rem;
+    position: absolute;
+    top: -0.8rem;
+    left: 50%;
+    z-index: 1;
+}
+
+.noticePublisher {
+    text-align: right;
+    padding: 0 6rem;
+
+}
+
+/* *************************************** 
+           Login Styles 
+**************************************** */
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5px auto; /* 15% from the top and centered */
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+    /* Position it in the top right corner outside of the modal */
+    position: absolute;
+    right: 25px;
+    top: 0; 
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+/* Close button on hover */
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+/* *************************************** 
+            Poll Styles 
+**************************************** */
+
+#poll ul {
+    width: 60vw;
+    margin: auto;
+    padding: 0;
+}
+
+#poll ul li {
+    margin: 2em;
+}
+
+
+/* *************************************** 
+            Book List Styles 
+**************************************** */
+
+#booklist input[type=text] {
+    float: right;
+    padding: 6px;
+    border: none;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+}
+
+#searchAndAdd {
+    width: 60vw;
+    margin: 4rem auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#searchAndAdd div {
+    flex: 1;
+    text-align: center;
+}
+
+#searchWithClear {
+    display: inline-flex;
+    width: max-content;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 0 2rem;
+}
+
+#searchWithClear input[type=text] {
+    margin: auto;
+    width: fit-content;
+    float: none;
+}
+
+.clear {
+    display: inline-block;
+    padding: 0 0.8rem;
+    font-weight: bold;
+}
+
+
+/* *************************************** 
+            Add Book form Styles 
+**************************************** */
+
+#contactForm {
+    width: 60%;
+    margin: auto;
+}
+#contactForm textarea {
+    width: 100%;
+    height: 8rem;
+   
+}
+
+input.btn.outline {
+    margin: 1em 0;
+}
+
+#contactForm input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+}
+
+#contactForm input[type=text]:focus {
+    border: 3px solid #555;
+}
+
+
+/* *************************************** 
+            Loader Styles 
+**************************************** */
+.loader {
+  left: 50%;
+  top: 50%;
+  position: fixed;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%); }
+  .loader #ud811Spinner {
+    box-sizing: border-box;
+    stroke: #673AB7;
+    stroke-width: 3px;
+    -webkit-transform-origin: 50%;
+            transform-origin: 50%;
+    -webkit-animation: line 1.6s cubic-bezier(0.4, 0, 0.2, 1) infinite, rotate 1.6s linear infinite;
+            animation: line 1.6s cubic-bezier(0.4, 0, 0.2, 1) infinite, rotate 1.6s linear infinite; }
+
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0); }
+  to {
+    -webkit-transform: rotate(450deg);
+            transform: rotate(450deg); } }
+
+@keyframes rotate {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0); }
+  to {
+    -webkit-transform: rotate(450deg);
+            transform: rotate(450deg); } }
+
+@-webkit-keyframes line {
+  0% {
+    stroke-dasharray: 2, 85.964;
+    -webkit-transform: rotate(0);
+            transform: rotate(0); }
+  50% {
+    stroke-dasharray: 65.973, 21.9911;
+    stroke-dashoffset: 0; }
+  100% {
+    stroke-dasharray: 2, 85.964;
+    stroke-dashoffset: -65.973;
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg); } }
+
+@keyframes line {
+  0% {
+    stroke-dasharray: 2, 85.964;
+    -webkit-transform: rotate(0);
+            transform: rotate(0); }
+  50% {
+    stroke-dasharray: 65.973, 21.9911;
+    stroke-dashoffset: 0; }
+  100% {
+    stroke-dasharray: 2, 85.964;
+    stroke-dashoffset: -65.973;
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg); } }
+
+
+/* ****************************  
+        media queries 
+***************************** */
+
+@media screen and (min-width:800px) {
+    /* *************************************** 
+                General Styles 
+    **************************************** */
+    
+    body {
+        font-size: 18px;
+    }
+    
+    .content {
+        width: 75%;
+    }
+
+    /* *************************************** 
+                Main Banner Styles 
+    **************************************** */
+    
+    #banner {
+        border-bottom: 0px;
+    }
+    
+    /* *************************************** 
+                Nav Styles 
+    **************************************** */
+    
+    #main-nav {
+        position: relative;
+        left: 0;
+        min-height: 0;
+    }
+    
+    #main-menu {
+        position: relative;
+        top: 0;
+        padding: 0;
+        width: 75%;
+        margin: 0 auto;
+    }
+    
+    #main-menu li {
+        float:left;
+        width: 20%;
+        position: relative;
+    }   
+    
+    /* Burger button only for mobile view */
+    #menu-icon {
+        display: none;
+    }
+    
+} /* media Query min-width:800px*
