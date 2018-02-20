@@ -404,7 +404,7 @@ nav ul li a {
     margin: -2em 0px 0px 0px;
     -moz-border-radius: 5px 5px 0px 0px;
     border-radius: 5px;
-    box-shadow: 0 0 6px white;
+    box-shadow: 0 0 8px 1px white;
     font-weight: 800;
 }
 
