@@ -36,5 +36,4 @@
             <?php include('./includes/nav.php'); ?>
         </div><!-- nav -->
         
-        <div class="content"> <!-- Add Google Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Astloch|Autour+One|Barrio|Bungee+Shade|Codystar|Diplomata|Faster+One|Finger+Paint|Gravitas+One|Griffy|Henny+Penny|IM+Fell+English+SC|Jolly+Lodger|Metal+Mania|Monofett|Mountains+of+Christmas|Nosifer|Sofia|Trade+Winds|UnifrakturCook:700" rel="stylesheet">
+        <div class="content"> 
