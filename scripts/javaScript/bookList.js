@@ -146,14 +146,14 @@
         sortTable(this.dataset.column, this.childNodes[1].childNodes[0]);     
     }));
     
-    // Event listener for Book Info Modal
+    /*Event listener for Book Info Modal
     let books = document.querySelectorAll('.books');
     books.forEach(book => addEventListener('click', function(e){
         let chosenBook = e.target.innerText;
         <?php $book = chosenBook; ?>
         <?php include('./includes/bookInfo.php'); ?>
         document.getElementById('bookInfo').style.display='block';
-    }));
+    })); */
     
     // Event listeners for search funtion
     searchInput.addEventListener('change', displayMatches);
