@@ -5,7 +5,7 @@ session_start();
 // Check if user is logged in using the session variable
 if ( $_SESSION['logged_in'] != 1 ) {
   $_SESSION['message'] = "You must log in before viewing your profile page!";
-  header("location: includes/error.php");    
+  header("location: loginPages/error.php");    
 }
 else {
     // Makes it easier to read
@@ -15,9 +15,14 @@ else {
     $active = $_SESSION['active'];
 }
 
-    define("TITLE", "Profile | Franklin's Fine Dininng");
+    const TITLE = "Profile | Page 3 Book Club";
     
-    include('includes/header.php');
+    if ($active) {
+       include('../includes/header.php');         
+    } else {
+          
+      include('../includes/headerWithoutNav.php');
+    }
 ?>
 
   <div class="form">
@@ -49,18 +54,19 @@ else {
               on the email link!
               </div>';
           }
-          
+      
           ?>
           
           <h2><?php echo $first_name.' '.$last_name; ?></h2>
           <p><?= $email ?></p>
-          
-          <a href="includes/logout.php"><button class="button button-block" name="logout"/>Log Out</button></a>
-
+        <div class="formBtn">
+            <a href="../loginPages/logout.php"><button class="btn outline" name="logout">Log Out</button></a>
+      </div>
     </div>
-    
-<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-<script src="js/index.js"></script>
+    <script src="../scripts/javaScript/inputs.js"></script>
 
-</body>
-</html>
+<?php
+    
+    include('../includes/footer.php');
+?>
+

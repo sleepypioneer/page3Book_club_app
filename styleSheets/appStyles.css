@@ -175,7 +175,7 @@ label.radio {
 form {
     display: flex;
     flex-direction: column;
-    width: 60vw;
+    width: 100%;
     margin: auto;
 }
 
@@ -188,6 +188,10 @@ form label {
     width: 90%;
     text-align: left;
     margin: 0 auto 0 auto;
+}
+
+.forgot a {
+    color: #9357ff;
 }
 
 
@@ -216,9 +220,15 @@ h1{
     padding: 0 2em;
     color: white;
     /* width: 100%; */
-    font-size: 8em;
+    font-size: 4em;
     margin: auto;
     padding: 0.25em;
+}
+
+h3 {
+    font-family: 'Codystar', cursive;
+    font-size: 2rem;
+    line-height: 2.4rem;
 }
 
 h4, h2, h3 {
@@ -245,33 +255,29 @@ hr {
         Button Styles 
 ***************************** */
 
-.btn {
-    border: 2px solid #fdf5e8;
-    background-color: #3f3446;
-    color: black;
-    padding: 14px 28px;
-    font-size: 16px;
-    cursor: pointer;
+.outline:hover {
+    border-color: #020a17;
 }
 
 .outline {
-    border-color: #3f3446;
+    border: #b39fc1 0.05rem solid;
     color: #fdf5e8;
     border-radius: 0.5em;
     padding: 0.8em;
 }
 
-.outline:hover {
-    border-color: #706677;
+.btn {
+    background-color: #2d3142;
+    font-size: 16px;
+    cursor: pointer;
 }
-
 
 /* **************************** 
         Main Banner Styles 
 ***************************** */
 
 #banner {
-    height: 25rem;
+    height: 10rem;
     background: url(../assets/imgs/readingWomanInBathWithBooks.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -536,9 +542,11 @@ nav .active .icon-bar:last-child {
             Developer Info Styles 
 **************************************** */
 
-#developerDetails{
+#developerDetails {
     text-align: center;
     margin: 2em 0;
+    font-family: 'Codystar', cursive;
+    font-weight: bold;
 }
 
 #developerDetails ul {
@@ -613,25 +621,27 @@ nav .active .icon-bar:last-child {
     transition: opacity ease 1s;
     position: absolute;
     top: -6%;
-    left: 14%;
     z-index: 1;
 }
 
 .field-wrap label {
-  position: absolute;
-  -webkit-transform: translateY(6px);
-          transform: translateY(6px);
-  left: 13px;
-  color: rgba(255, 255, 255, 0.5);
-  -webkit-transition: all 0.25s ease;
-  transition: all 0.25s ease;
-  -webkit-backface-visibility: hidden;
-  pointer-events: none;
-  font-size: 22px;
+    position: absolute;
+    -webkit-transform: translateY(6px);
+    transform: translateY(6px);
+    left: 0;
+    top: 0;
+    color: rgba(255, 255, 255, 0.5);
+    -webkit-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+    -webkit-backface-visibility: hidden;
+    pointer-events: none;
+    font-size: 22px;
+    padding: 0 0 0 1rem;
 }
+
 .field-wrap label .req {
-  margin: 2px;
-  color: #1ab188;
+    margin: 2px;
+    color: #ca5182;
 }
 
 .field-wrap label.active {
@@ -652,18 +662,20 @@ nav .active .icon-bar:last-child {
   font-size: 22px;
   display: block;
   width: 100%;
+    min-height: 3rem;
   padding: 5px 10px;
   background: none;
   background-image: none;
-  border: 1px solid #a0b3b0;
+border: 1px solid #b39fc1;
   color: #ffffff;
   border-radius: 0;
   -webkit-transition: border-color .25s ease, box-shadow .25s ease;
   transition: border-color .25s ease, box-shadow .25s ease;
 }
+
 input:focus, textarea:focus {
-  outline: 0;
-  border-color: #1ab188;
+    outline: 0;
+    border-color: #9357ff;
 }
 
 textarea {
@@ -671,14 +683,21 @@ textarea {
   resize: vertical;
 }
 
+.form {
+    padding: 40px;
+    max-width: 600px;
+    margin: auto;
+    border-radius: 4px;
+}
 
-.form{
-  background: rgba(19, 35, 47, 0.9); 
-  padding: 40px;
-  max-width: 600px;
-  margin: 40px auto;
-  border-radius: 4px;
-  box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+.formBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.formBtn p {
+    padding: 0;
 }
 
 .tab-group {
@@ -687,8 +706,6 @@ textarea {
     margin: 0 0 40px 0;
     box-sizing: border-box;
     display:flex;
-    border: aliceblue 2px solid;
-    border-radius: 5px;
 }
 
 .tab-group:after {
@@ -702,29 +719,33 @@ textarea {
 }
 
 .tab-group li a {
-  display: inline-block;
-  text-decoration: none;
-  padding: 15px 0;
-  background: rgba(160, 179, 176, 0.25);
-  color: #a0b3b0;
-  font-size: 20px;
+    display: inline-block;
+    text-decoration: none;
+    padding: 15px 0;
+    background: #706677;
+    color: #ccc;
+    font-size: 20px;
     width: 100%;
-  text-align: center;
-  cursor: pointer;
-  -webkit-transition: .5s ease;
-  transition: .5s ease;
+    text-align: center;
+    cursor: pointer;
+    -webkit-transition: .5s ease;
+    transition: .5s ease;
 }
+
 .tab-group li a:hover {
-  background: #179b77;
-  color: #ffffff;
+    background: #2d3142;
+    color: #ffffff;
 }
+
 .tab-group .active a {
-  background: #1ab188;
-  color: #ffffff;
+    background: #2d3142;
+    color: #ffffff;
 }
 
 .tab-content {
     position: relative;
+    display: flex;
+    justify-content: center;
 }
 
 .field-wrap {
@@ -748,71 +769,9 @@ textarea {
 
 
 
-
-
-
-
-
-
-
-
-
-
-/* The Modal (background) */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-    padding-top: 60px;
-}
-
-/* Modal Content/Box */
-.modal-content {
-    background-color: #fefefe;
-    margin: 5px auto; /* 15% from the top and centered */
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
-}
-
-/* The Close Button */
-.close {
-    /* Position it in the top right corner outside of the modal */
-    position: absolute;
-    right: 25px;
-    top: 0; 
-    color: #000;
-    font-size: 35px;
-    font-weight: bold;
-}
-
-/* Close button on hover */
-.close:hover,
-.close:focus {
-    color: red;
-    cursor: pointer;
-}
-
-/* Add Zoom Animation */
-.animate {
-    -webkit-animation: animatezoom 0.6s;
-    animation: animatezoom 0.6s
-}
-
-@-webkit-keyframes animatezoom {
-    from {-webkit-transform: scale(0)} 
-    to {-webkit-transform: scale(1)}
-}
-
-@keyframes animatezoom {
-    from {transform: scale(0)} 
-    to {transform: scale(1)}
+p.forgot {
+    text-align: right;
+    padding: 0;
 }
 /* *************************************** 
             Poll Styles 
@@ -977,8 +936,22 @@ input.btn.outline {
 /* ****************************  
         media queries 
 ***************************** */
+@media screen and (min-width:750px) { /*ipad*/
+    #banner {
+        height: 17rem;
+    }
+    
+    .form {
+        min-height: 800px;
+        margin-top: 40px;    
+    }
+    
+    h1 {
+        font-size: 6em;
+    }
+}
 
-@media screen and (min-width:800px) {
+@media screen and (min-width:1050px) {
     /* *************************************** 
                 General Styles 
     **************************************** */
@@ -990,6 +963,24 @@ input.btn.outline {
     .content {
         width: 75%;
     }
+    
+    h1 {
+        font-size: 6em;
+    }
+
+
+    /* **************************** 
+        Text Styles 
+    ***************************** */
+
+    h3 {
+        font-size: -webkit-xxx-large;
+    }
+    
+    h1 {
+        font-size: 8em;
+    }
+
 
     /* *************************************** 
                 Main Banner Styles 
@@ -997,6 +988,7 @@ input.btn.outline {
     
     #banner {
         border-bottom: 0.4rem solid black;
+        height: 25rem;
     }
     
     /* *************************************** 

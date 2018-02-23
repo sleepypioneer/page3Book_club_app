@@ -1,4 +1,4 @@
- <div id="footer" class="cf">
+        <div id="footer" class="cf">
                <!-- <div class="column three">
                     <strong>Phone</strong>
                     808.529.3819
@@ -27,7 +27,7 @@
 
 
         </div><!-- content -->
-        <?php include('./includes/developerDetails.php'); ?>
+        <?php include('developerDetails.php'); ?>
 
     </div><!-- wrapper -->
 

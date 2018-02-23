@@ -2,9 +2,9 @@
 
 <?php
     $companyName = "Page 3";
-    include('./includes/arrays.php');
+    include('./scripts/php/arrays.php');
     const TITLE = "Login | Page 3 Bookclub";
-    require './includes/dbconnection.php';
+    require './scripts/php/dbconnection.php';
     session_start();
 ?>
 
@@ -28,13 +28,13 @@
         {
             if (isset($_POST['login'])) { //user logging in
 
-                require './includes/login.php';
+                require './loginPages/login.php';
 
             }
 
             elseif (isset($_POST['register'])) { //user registering
 
-                require './includes/register.php';
+                require './loginPages/register.php';
 
             }
         }
@@ -60,7 +60,7 @@
             <div class="tab-content">
 
                 <div id="login">
-                    <h2>Welcome Back!</h2>
+                    <h3>Welcome Back</h3>
 
                     <form action="index.php" method="post" autocomplete="off">
 
@@ -76,18 +76,19 @@
                       Password<span class="req">*</span>
                     </label>
                             <input type="password" required autocomplete="off" name="password" />
+                            <p class="forgot"><a href="./loginPages/forgot.php">Forgot Password?</a></p>
                         </div>
-
-                        <p class="forgot"><a href="forgot.php">Forgot Password?</a></p>
-
-                        <button class="button button-block" name="login" />Log In</button>
+                        
+                        <div class="formBtn">
+                            <button class="btn outline" name="login">Log In</button>
+                        </div>
 
                     </form>
 
                 </div>
 
                 <div id="signup" >
-                    <h2>Sign Up for Free</h2>
+                    <h3>Sign Up for Free</h3>
 
                     <form action="index.php" method="post" autocomplete="off">
 
@@ -120,9 +121,9 @@
                     </label>
                             <input type="password" required autocomplete="off" name='password' />
                         </div>
-
-                        <button type="submit" class="button button-block" name="register" />Register</button>
-
+                        <div class="formBtn">
+                            <button type="submit" class="btn outline" name="register">Register</button>
+                        </div>        
                     </form>
 
                 </div>
@@ -131,85 +132,7 @@
 
         </div><!-- /form -->
     
-        <script type="text/javascript">
-                
-            let form = document.querySelector('.form');
-            let textInputs = form.querySelectorAll('input, textarea')
-            let tabs = document.querySelectorAll('.tab a');
-            
-            function highlight(e){
-                let selected = e.srcElement;
-                let label = selected.previousElementSibling;
-                
-                if (e.type === 'keyup') {
-                        if (selected.value === '') {
-                            label.classList.remove('active');
-                            label.classList.remove('hightlight'); 
-                    } else {
-                      label.classList.add('active');
-                        label.classList.add('highlight');
-                    }
-                } else if (e.type === 'blur') {
-                    if( selected.value === '' ) {
-                        label.classList.remove('active');
-                        label.classList.remove('hightlight'); 
-                        } else {
-                        label.classList.remove('highlight');   
-                        }   
-                } else if (e.type === 'focus') {
-
-                  if( selected.value === '' ) {
-                        label.classList.remove('highlight'); 
-                        } 
-                  else if( selected.value !== '' ) {
-                        label.classList.add('highlight');
-                        }
-                }
-            }
-            
-            
-            
-            tabs.forEach(tab => {
-                tab.addEventListener('click', function(e){
-                    e.preventDefault();
-                    let selected = e.target;
-                    let children = selected.parentElement.parentElement.children;
-                    let target = selected.hash;
-                    
-                    
-                    children[0].classList.remove('active');
-                    children[1].classList.remove('active');
-                    selected.parentElement.classList.add('active');
-                    
-                    if (target === "#signup"){
-                        document.querySelector('#login').style.opacity = 0;
-                        document.querySelector('#login').style.zIndex = 0;
-                        setTimeout(function(){
-                            document.querySelector(target).style.opacity = 1;
-                            document.querySelector(target).style.zIndex = 1;
-                        }, 500);
-                    } else if (target === "#login"){
-                        document.querySelector('#signup').style.opacity = 0;
-                        document.querySelector('#signup').style.zIndex = 0;
-                        setTimeout(function(){
-                            document.querySelector(target).style.opacity = 1;
-                            document.querySelector(target).style.zIndex = 1;
-                        }, 500);
-                    }
-                    
-                    console.log(target);
-                    
-                })
-            })
-            
-            
-            textInputs.forEach(input => {
-                input.addEventListener('keyup', highlight);
-                input.addEventListener('blur', highlight);
-                input.addEventListener('focus', highlight);
-            })
-            
-    </script>
+        <script type="text/javascript" src="scripts/javaScript/inputs.js"></script>
 
             
 <?php

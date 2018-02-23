@@ -2,7 +2,7 @@
 
 <?php
     $companyName = "Page 3";
-    include('./includes/arrays.php');
+    include('/page3Book_club_app/scripts/php/arrays.php');
 ?>
 
 <!DOCTYPE html>
@@ -14,7 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
     
     <!-- Link style sheet -->
-    <link href="./styleSheets/appStyles.css" rel="stylesheet">
+    <link href="../styleSheets/appStyles.css" rel="stylesheet">
     
     <!-- Add Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Astloch|Autour+One|Barrio|Bungee+Shade|Codystar|Diplomata|Faster+One|Finger+Paint|Gravitas+One|Griffy|Henny+Penny|IM+Fell+English+SC|Jolly+Lodger|Metal+Mania|Monofett|Mountains+of+Christmas|Nosifer|Sofia|Trade+Winds|UnifrakturCook:700" rel="stylesheet">
@@ -25,7 +25,7 @@
     <div class="wrapper">
         <div id="banner">
             <div>
-                <a href="./index.php" title="Return to Home">
+                <a href="./pages/home.php" title="Return to Home">
                     <!--<img src="./assets/imgs/readingWomanInBathWithBooks.jpg">-->
                     <h1>Page 3</h1>
                 </a>
@@ -33,7 +33,7 @@
         </div><!-- banner -->
         
         <div id="nav">
-            <?php include('./includes/nav.php'); ?>
+            <?php include('../includes/nav.php'); ?>
         </div><!-- nav -->
         
         <div class="content"> 

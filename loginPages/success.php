@@ -14,10 +14,10 @@ include("./includes/headerWithoutNav.php");
     if( isset($_SESSION['message']) AND !empty($_SESSION['message']) ):
         echo $_SESSION['message'];    
     else:
-        header( "location: index.php" );
+        header( "location: ../index.php" );
     endif;
     ?>
     </p>
-    <a href="index.php"><button class="button button-block">Home</button></a>
+    <a href="../index.php"><button class="button button-block">Home</button></a>
 </div>
 

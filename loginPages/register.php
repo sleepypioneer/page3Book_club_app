@@ -22,7 +22,7 @@ $result = $mysqli->query("SELECT * FROM users WHERE email='$email'") or die($mys
 if ( $result->num_rows > 0 ) {
     
     $_SESSION['message'] = 'User with this email already exists!';
-    header("location: error.php");
+    header("location: ./loginPages/error.php");
     
 }
 else { // Email doesn't already exist in a database, proceed...
@@ -55,13 +55,13 @@ else { // Email doesn't already exist in a database, proceed...
 
         mail( $to, $subject, $message_body );
 
-        header("location: ./includes/profile.php"); 
+        header("location: ./pages/profile.php"); 
 
     }
 
     else {
         $_SESSION['message'] = 'Registration failed!';
-        header("location: error.php");
+        header("location: ./loginPages/error.php");
     }
 
 }

@@ -5,18 +5,19 @@ $server     = "localhost";
 $username   = "root";
 $password   = "";
 $database   = "book_app";
+$success    = "Database connection was successful";
 
 try {
-    $connection = mysqli_connect($server, $username, $password, $database);
+    $mysqli = mysqli_connect($server, $username, $password, $database);
     
-    if($connection){
-        ?>
-
-<script type="text/javascript">
-        console.log("<?php echo "Database connection was successful";?>");
-</script>
+    if($mysqli){
+?>
+            <script type="text/javascript">
+                    console.log("<?php echo $success; ?>");
+            </script>
 <?php
-} } catch (Exception $errormsg){
+    }
+} catch (Exception $errormsg){
     echo $errormsg->getMessage();
 }
 

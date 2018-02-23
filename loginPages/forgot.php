@@ -1,6 +1,6 @@
 <?php 
 /* Reset your password form, sends reset.php password link */
-require './includes/dbconnection.php';
+require '../scripts/php/dbconnection.php';
 session_start();
 
 // Check if form submitted with method="post"
@@ -12,7 +12,7 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' )
     if ( $result->num_rows == 0 ) // User doesn't exist
     { 
         $_SESSION['message'] = "User with that email doesn't exist!";
-        header("location: error.php");
+        header("location: ./error.php");
     }
     else { // User exists (num_rows != 0)
 
@@ -40,11 +40,11 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' )
 
         mail($to, $subject, $message_body);
 
-        header("location: ./includes/success.php");
+        header("location: ./success.php");
   }
 }
 const TITLE = "Forgot Password | Page 3 Bookclub";
-include("./includes/headerWithoutNav.php"); 
+include("../includes/headerWithoutNav.php"); 
 ?>
 
     
@@ -59,11 +59,14 @@ include("./includes/headerWithoutNav.php");
       </label>
       <input type="email"required autocomplete="off" name="email"/>
     </div>
-    <button class="button button-block">Reset</button>
+        <div class="formBtn">
+            <button class="btn outline">Reset</button>
+        </div>
     </form>
   </div>
+    <script type="text/javascript" src="scripts/javaScript/inputs.js"></script>
 
 <?php
     
-    include('./includes/footer.php');
+    include('../includes/footer.php');
 ?>

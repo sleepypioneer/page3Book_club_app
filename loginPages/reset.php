@@ -2,7 +2,7 @@
 /* The password reset form, the link to this page is included
    from the forgot.php email message
 */
-require 'db.php';
+require '../scripts/php/dbconnection.php';
 session_start();
 
 // Make sure email and hash variables aren't empty
@@ -17,12 +17,12 @@ if( isset($_GET['email']) && !empty($_GET['email']) AND isset($_GET['hash']) && 
     if ( $result->num_rows == 0 )
     { 
         $_SESSION['message'] = "You have entered invalid URL for password reset!";
-        header("location: error.php");
+        header("location: ./error.php");
     }
 }
 else {
     $_SESSION['message'] = "Sorry, verification failed, try again!";
-    header("location: ./includes/error.php");  
+    header("location: ./error.php");  
 }
 
     define("TITLE", "Change Password | Franklin's Fine Dininng");
@@ -54,13 +54,16 @@ else {
           <input type="hidden" name="email" value="<?= $email ?>">    
           <input type="hidden" name="hash" value="<?= $hash ?>">    
               
-          <button class="button button-block"/>Apply</button>
+          <button class="button button-block">Apply</button>
           
           </form>
 
     </div>
-<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-<script src="js/index.js"></script>
 
-</body>
-</html>
+    <script src="../scripts/javaScript/inputs.js"></script>
+
+
+<?php
+    
+    include('./includes/footer.php');
+?>

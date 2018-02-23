@@ -1,6 +1,6 @@
 <?php 
     const TITLE = "Home | Page 3 Bookclub";
-    include("./includes/header.php"); 
+    include("../includes/header.php"); 
 ?>
 
     <div class="manifest">   
@@ -29,6 +29,6 @@
 
 
 <?php 
-    include("./includes/footer.php"); 
+    include("../includes/footer.php"); 
 ?>
 
