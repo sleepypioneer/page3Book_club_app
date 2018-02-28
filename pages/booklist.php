@@ -1,4 +1,10 @@
 <?php 
+    session_start();
+    // Check if user is logged in using the session variable
+    if ( $_SESSION['logged_in'] != 1 ) {
+      $_SESSION['message'] = "You must log in before viewing your profile page!";
+      header("location: ../loginPages/error.php");    
+    }
     const TITLE = "Book List | Page 3 Book Club";
 
     include("../includes/header.php"); 
@@ -89,7 +95,7 @@
 
         </div>
         <!-- Insert link to app.js here -->
-        <script type="text/javascript" src="scripts/javaScript/bookList.js"></script>
+        <script type="text/javascript" src="../scripts/javaScript/bookList.js"></script>
 
 
 <?php 

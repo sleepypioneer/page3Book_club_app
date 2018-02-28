@@ -11,9 +11,9 @@ include("../includes/headerWithoutNav.php");
           <h1>Thanks for stopping by</h1>
               
           <p><?= 'You have been logged out!'; ?></p>
-          
-          <a href="../index.php"><button class="button button-block">Home</button></a>
-
+           <div class="formBtn">
+                <a href="../index.php"><button class="button button-block">Log back in</button></a>
+            </div>
     </div>
 <?php 
     include("../includes/footer.php"); 

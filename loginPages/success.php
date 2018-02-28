@@ -4,7 +4,7 @@ session_start();
 
 
 const TITLE = "Success for Reset | Page 3 Bookclub";
-include("./includes/headerWithoutNav.php"); 
+include("../includes/headerWithoutNav.php"); 
 ?>
 
 <div class="form">
@@ -18,6 +18,9 @@ include("./includes/headerWithoutNav.php");
     endif;
     ?>
     </p>
-    <a href="../index.php"><button class="button button-block">Home</button></a>
+    
+    <div class="formBtn">
+        <a href="../index.php"><button class="btn outline">Home</button></a>
+    </div>
 </div>
 

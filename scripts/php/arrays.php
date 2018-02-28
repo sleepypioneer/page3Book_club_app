@@ -24,31 +24,31 @@
 	$navItems = array(
 				
 					array(
-						"slug"	=> "./home.php",
+						"slug"	=> "/page3Book_club_app/pages/home.php",
 						"title"	=> "Home"
 					),
 				
 					array(
-						"slug"	=> "./meetup.php",
+						"slug"	=> "/page3Book_club_app/pages/meetup.php",
 						"title"	=> "Next meet up"
 					),
 					
 					array(
-						"slug"	=> "./booklist.php",
+						"slug"	=> "/page3Book_club_app/pages/booklist.php",
 						"title"	=> "Book List"
 					),
                     
                     array(
-						"slug"	=> "./noticeboard.php",
+						"slug"	=> "/page3Book_club_app/pages/noticeboard.php",
 						"title"	=> "Notice Board"
 					),
                     array(
-						"slug"	=> "./poll.php",
+						"slug"	=> "/page3Book_club_app/pages/poll.php",
 						"title"	=> "Next Month's Poll"
 					),
 					
                     array(
-						"slug"	=> "./contact.php",
+						"slug"	=> "/page3Book_club_app/pages/contact.php",
 						"title"	=> "Contact"
 					)
 				

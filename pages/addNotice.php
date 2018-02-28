@@ -1,4 +1,10 @@
 <?php 
+    session_start();
+    // Check if user is logged in using the session variable
+    if ( $_SESSION['logged_in'] != 1 ) {
+      $_SESSION['message'] = "You must log in before viewing your profile page!";
+      header("location: ../loginPages/error.php");    
+    }
     const TITLE = "Add Books to Book List | Page 3 Book Club";
 
     include("../includes/header.php"); 
@@ -37,7 +43,7 @@
             $query = "INSERT INTO notices(id, publisher, headline,content) VALUES('NULL', '".$publisher."', '".$headline."', '".$content."')";
 
             try{
-                $run_query = mysqli_query($connection, $query);
+                $run_query = mysqli_query($mysqli, $query);
 
                 if($run_query){
 
@@ -67,7 +73,7 @@
 
 
     <?php    
-        mysqli_close($connection);
+        mysqli_close($mysqli);
             }
 
         } else {

@@ -22,7 +22,7 @@
         include('../scripts/php/dbconnection.php');
 
         $query = "SELECT * FROM books";
-        $run = mysqli_query($connection, $query);
+        $run = mysqli_query($mysqli, $query);
     ?>
     <!--close php here to input data from while loop lower down-->
     <div  style="text-align: center;">
@@ -32,10 +32,10 @@
                             echo $result['title']; 
                 } ?>
         </h4>
-        <img src="assets/imgs/do_not_say_we_have_nothing.jpg" alt="do_not_say_we_have_nothing" class="bookCover" />
+        <img src="/page3Book_club_app/assets/imgs/do_not_say_we_have_nothing.jpg" alt="do_not_say_we_have_nothing" class="bookCover" />
     </div>
     <?php
-        mysqli_close($connection);
+        mysqli_close($mysqli);
     ?>
     <h3>Where:</h3>
 <p>Home Cafe, Jonnasstrasse 23, 12053</p>

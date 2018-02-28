@@ -64,7 +64,7 @@ include("../includes/headerWithoutNav.php");
         </div>
     </form>
   </div>
-    <script type="text/javascript" src="scripts/javaScript/inputs.js"></script>
+    <script type="text/javascript" src="/page3Book_club_app/scripts/javaScript/inputs.js"></script>
 
 <?php
     

@@ -16,8 +16,11 @@ include("../includes/headerWithoutNav.php");
         header( "location: ../index.php" );
     endif;
     ?>
-    </p>     
-    <a href="../index.php"><button class="btn outline">Home</button></a>
+    </p> 
+    <div class="formBtn">
+        <a href="/page3Book_club_app/index.php"><button class="btn outline">Go Back</button></a>
+    </div>
+    
 </div>
 <?php
     

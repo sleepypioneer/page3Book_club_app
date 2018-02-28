@@ -1,4 +1,10 @@
 <?php 
+    session_start();
+    // Check if user is logged in using the session variable
+    if ( $_SESSION['logged_in'] != 1 ) {
+      $_SESSION['message'] = "You must log in before viewing your profile page!";
+      header("location: ../loginPages/error.php");    
+    }
     const TITLE = "Meet up | Page 3 Book Club";
 
     include("../includes/header.php"); 

@@ -5,7 +5,7 @@ session_start();
 // Check if user is logged in using the session variable
 if ( $_SESSION['logged_in'] != 1 ) {
   $_SESSION['message'] = "You must log in before viewing your profile page!";
-  header("location: loginPages/error.php");    
+  header("location: /page3Book_club_app/loginPages/error.php");    
 }
 else {
     // Makes it easier to read

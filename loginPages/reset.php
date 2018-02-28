@@ -60,7 +60,7 @@ else {
 
     </div>
 
-    <script src="../scripts/javaScript/inputs.js"></script>
+    <script src="/page3Book_club_app/scripts/javaScript/inputs.js"></script>
 
 
 <?php
