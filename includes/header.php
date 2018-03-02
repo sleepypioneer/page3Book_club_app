@@ -17,21 +17,28 @@
     <link href="/page3Book_club_app/styleSheets/appStyles.css" rel="stylesheet">
     
     <!-- Add Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Astloch|Autour+One|Barrio|Bungee+Shade|Codystar|Diplomata|Faster+One|Finger+Paint|Gravitas+One|Griffy|Henny+Penny|IM+Fell+English+SC|Jolly+Lodger|Metal+Mania|Monofett|Mountains+of+Christmas|Nosifer|Sofia|Trade+Winds|UnifrakturCook:700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Astloch|Autour+One|Barrio|Bungee+Shade|Codystar|Diplomata|Faster+One|Finger+Paint|Gravitas+One|Griffy|Henny+Penny|IM+Fell+English+SC|Jolly+Lodger|Metal+Mania|Monofett|Mountains+of+Christmas|Nosifer|Varela+Round|Sofia|Trade+Winds|UnifrakturCook:700" rel="stylesheet">
 
 </head>
 <body id="final-example">
-    
     <div class="wrapper">
         <div id="banner">
             <div>
                 <a href="/page3Book_club_app/pages/home.php" title="Return to Home">
-                    <!--<img src="./assets/imgs/readingWomanInBathWithBooks.jpg">-->
                     <h1>Page 3</h1>
                 </a>
             </div>
         </div><!-- banner -->
-        
+        <div id="exitSign">
+            <a href="../loginPages/logout.php">
+              <div class="neon signOuter pink">
+                <div class="signInner">
+                  <span class="stroke-double stroke-single"></span>
+                </div>
+              </div>
+                <div id="exitIcon"><img src="../assets/imgs/icons/Signout_font_awesome.svg"/></div>
+            </a>
+        </div>
         <div id="nav">
             <?php include('../includes/nav.php'); ?>
         </div><!-- nav -->

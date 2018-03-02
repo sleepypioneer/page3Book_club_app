@@ -83,7 +83,17 @@
 
         } else {
     ?>
-
+            
+    <h2> Find Book on goodreads.com </h2>
+    <p>will automaticall fill in the form below form good reads</p>
+    
+    <div id="search">
+        <input type="text" name="search-input" id="search-input" placeholder="Geben Sie einen Namen ein">
+        <button type="button" id="search-btn" name="search-btn"><span class="fas fa-search">?</span></button>
+    </div>
+    
+    <hr>
+            
     <form method="post" action="" id="contactForm">
 
         <label for="title">Book Title<span class="required">*</span></label>

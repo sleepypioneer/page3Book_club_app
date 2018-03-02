@@ -8,6 +8,15 @@
     const TITLE = "Meet up | Page 3 Book Club";
 
     include("../includes/header.php"); 
+    include('../scripts/php/dbconnection.php');
+    $booklist = array();
+    $query = "SELECT `title`, `author`, `voters`, `synopsis` FROM books WHERE shelf='poll'";
+    $run = mysqli_query($mysqli, $query);
+
+    while($result = mysqli_fetch_assoc($run)){
+        array_push($booklist, $result);
+    }
+    
 ?>
     <div class="content">
         <div id="poll">
@@ -20,20 +29,21 @@
         </p>
         
         <ul>
+            <?php for($i=0; $i <count($booklist); $i++){ ?>
             <li>
-                <input type="radio" id="choice1" name="choice" value="Delta of Venus">
-                <label for="choice1"><em>Delta of Venus </em>- Anais Nin, collection of short stories by one of the first prominent female erotica authors.</label>
+                <input type="checkbox" id="choice<?php echo $i; ?>" name="choice" value="<?php echo $booklist[$i]['title']; ?>">
+                <span><?php echo strlen($booklist[$i]['voters']); ?></span>
+                
+                <label for="choice1">
+                    <em><?php echo $booklist[$i]['title']; ?></em> 
+                    - <?php echo $booklist[$i]['author']; ?>
+                    , <?php echo $booklist[$i]['synopsis']; ?>
+                </label>
             </li>
 
-            <li>
-                <input type="radio" id="choice2" name="choice" value="Sister Outsider">
-                <label for="choice2"><em>Sister Outsider </em>- Audrey Lorde, collection of essays and poems on intersectional feminism.</label>
-            </li>
-
-            <li>
-                <input type="radio" id="choice3" name="choice" value="Baise Moi">
-                <label for="choice3"><em>Baise Moi </em>- Virginie Despentes, a controversial novel following two girls on a road trip / killing spree after suffering a gang rape.</label>
-            </li>
+             <?php 
+                } /* end of php while loop */
+            ?>
         </ul>
 
         <hr>

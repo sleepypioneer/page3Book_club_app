@@ -100,10 +100,13 @@ font-family: 'Gravitas One', cursive;
     font-family: 'Gravitas One', cursive;
 }
 
+/* **************************** 
+        Variables
+***************************** */
 
-
-
-
+element {
+  --neon-text-color: #9357ff;
+}
 
 
 
@@ -190,6 +193,13 @@ form label {
     margin: 0 auto 0 auto;
 }
 
+/* Change the white to any color ;) */
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px #252121 inset;
+    -webkit-text-fill-color: #b39fc1 !important;
+}
+
+
 .forgot a {
     color: #9357ff;
 }
@@ -211,6 +221,28 @@ img.avatar.small {
     /* width: 4rem; */
     border-radius: 100%;
 }
+
+/* **************************** 
+        Exit button  Styles 
+***************************** */
+/*#742bf7;*/
+.signOuter {
+    display: none;
+}
+
+#exitIcon {
+    display: block;
+    height: 2rem;
+    width: 2rem;
+    position: relative;
+}
+
+#exitSign {
+    position: absolute;
+    top: 1%;
+    right: 1%;
+}
+
 
 /* **************************** 
         Text Styles 
@@ -839,6 +871,40 @@ p.forgot {
 /* *************************************** 
             Add Book form Styles 
 **************************************** */
+#search {
+    position: relative;
+    width: 60%;
+    margin: auto;
+    display: flex;
+}
+#search-input {
+    border-color: #fff;
+    /*border-radius: 0.5em 0 0 0.5em;*/
+    width: 75%;
+    height: 2.8rem;
+    padding: 0.8rem 1.4rem;
+}
+#search-input:focus {
+    border-color: #9357ff;
+}
+#search button {
+    font-size: 1em;
+    height: 2.8rem;
+    margin-left: -0.5em;
+    padding: 0.2em;
+    border: #fff thin solid;
+    /* border-radius: 0.5em; */
+    background: #3f3446;
+    color: #fff;
+}
+button#search-btn {
+    border-left-color: #333;
+    /*border-radius: 0 0.5em 0.5em 0;*/
+}
+
+button#search-btn:focus {
+    border-color: #9357ff;
+}
 
 #contactForm {
     width: 60%;
@@ -866,7 +932,7 @@ input.btn.outline {
 }
 
 #contactForm input[type=text]:focus {
-    border: 3px solid #555;
+    border: 3px solid #742bf7;
 }
 
 
@@ -949,6 +1015,109 @@ input.btn.outline {
     h1 {
         font-size: 6em;
     }
+    
+    /* *************************************** 
+                Nav Styles 
+    **************************************** */
+    
+    #main-nav {
+        position: relative;
+        left: 0;
+        min-height: 0;
+    }
+    
+    #main-menu {
+        position: relative;
+        top: 0;
+        padding: 0;
+        width: 75%;
+        margin: 0 auto;
+    }
+    
+    #main-menu li {
+        float:left;
+        width: 20%;
+        position: relative;
+    }   
+    
+    /* Burger button only for mobile view */
+    #menu-icon {
+        display: none;
+    }
+    
+    /* **************************** 
+        Exit button  Styles 
+    ***************************** */
+    #exitIcon {
+        display: none;
+    }
+    
+
+    .signOuter {
+      height: 3.45rem;
+      width: 8.5rem;
+      border: 0.2em solid #742bf7;
+    display: block;
+      box-shadow: 0 0 1rem #742bf7, -3px 2px 1rem #b39fc1;
+    /*box-shadow:
+            inset 0 0 50px #fff,      /* inner white */
+            /*inset 20px 0 80px #f0f,   /* inner left magenta short */
+            /*inset -20px 0 80px #0ff,  /* inner right cyan short */
+            /*inset 20px 0 300px #f0f,  /* inner left magenta broad */
+            /*inset -20px 0 300px #0ff, /* inner right cyan broad */
+            /*0 0 50px #fff,            /* outer white */
+            /*-10px 0 80px #f0f,        /* outer left magenta */
+            /*10px 0 80px #0ff;         /* outer right cyan */
+      border-radius: 2px;
+      position: relative;
+    }
+
+    .signInner {
+      height: 3rem;
+      width: 8rem;
+      position: relative;
+        left: 1%;
+      border: 0.2rem solid #742bf7;
+      box-shadow: inset 0 0 1rem #742bf7, inset 0 0 9px #b39fc1;
+      outline: white solid 1px;
+      color: white;
+      text-align: center;
+       font-size: 1.8rem;
+    }
+
+
+    /* prepare the selectors to add a stroke to */
+    .stroke-single,
+    .stroke-double {
+      position: relative;
+      left: -40%;
+      top: 25%;
+      background: transparent;
+      z-index: 0;
+    }
+    /* add a single stroke */
+    .stroke-single:before,
+    .stroke-double:before {
+      content: "EXIT";
+      position: absolute;
+      font-family: 'Varela Round', sans-serif;
+      left: 0;
+      z-index: -1;
+      letter-spacing: 0.8rem;
+    }
+    /* add a double stroke */
+    .stroke-double:after {
+      content: "EXIT";
+      position: absolute;
+      -webkit-text-stroke: 0.6rem #742bf7;
+      font-family: 'Varela Round', sans-serif;
+      text-shadow: 1em 0.3em 1.2em #742bf7, 0 0 1em #742bf7, 0 0 2em #742bf7;
+      letter-spacing: 0.8rem;
+      left: 0;
+      z-index: -2;
+    }
+
+    
 }
 
 @media screen and (min-width:1050px) {
@@ -989,35 +1158,6 @@ input.btn.outline {
     #banner {
         border-bottom: 0.4rem solid black;
         height: 25rem;
-    }
-    
-    /* *************************************** 
-                Nav Styles 
-    **************************************** */
-    
-    #main-nav {
-        position: relative;
-        left: 0;
-        min-height: 0;
-    }
-    
-    #main-menu {
-        position: relative;
-        top: 0;
-        padding: 0;
-        width: 75%;
-        margin: 0 auto;
-    }
-    
-    #main-menu li {
-        float:left;
-        width: 20%;
-        position: relative;
-    }   
-    
-    /* Burger button only for mobile view */
-    #menu-icon {
-        display: none;
     }
     
 } /* media Query min-width:800px*

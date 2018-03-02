@@ -30,6 +30,6 @@
         <?php include('developerDetails.php'); ?>
 
     </div><!-- wrapper -->
-
+    <!--<a href='https://www.freepik.com/free-vector/set-of-neon-signs-for-a-motel_949669.htm'>Designed by Freepik</a>-->
 </body>
 </html>

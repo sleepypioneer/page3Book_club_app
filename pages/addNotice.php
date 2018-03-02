@@ -8,6 +8,13 @@
     const TITLE = "Add Books to Book List | Page 3 Book Club";
 
     include("../includes/header.php"); 
+
+    include('../scripts/php/dbconnection.php');
+    $loggedinUser = $_SESSION['first_name'];
+    $query = "SELECT `avatar`, `id` FROM `users` WHERE `first_name`='$loggedinUser'";
+    $run = mysqli_query($mysqli, $query);
+    $userInfo = mysqli_fetch_assoc($run);
+    
 ?>
 
   <div id="addBook">
@@ -35,10 +42,10 @@
                 echo '<h4 class="error">Starred fields are required.</h4><a href="addBook.php" class="button block">Go back and try again</a>';
             }
 
-            $publisher = 1;
+            $publisher = $userInfo['id'];
             $date      = "2018-02-13";
             
-            include('./scripts/php/dbconnection.php');
+            include('../scripts/php/dbconnection.php');
 
             $query = "INSERT INTO notices(id, publisher, headline,content) VALUES('NULL', '".$publisher."', '".$headline."', '".$content."')";
 
