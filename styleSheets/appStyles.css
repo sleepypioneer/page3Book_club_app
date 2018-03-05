@@ -1016,6 +1016,18 @@ input.btn.outline {
         font-size: 6em;
     }
     
+    .container {
+        width: 60%;
+        margin: auto;
+    }
+    
+    #map {
+        position: relative;
+        overflow: hidden;
+        width: 60%;
+        margin: auto;
+    }
+    
     /* *************************************** 
                 Nav Styles 
     **************************************** */
@@ -1116,7 +1128,18 @@ input.btn.outline {
       left: 0;
       z-index: -2;
     }
-
+    
+    /* **************************** 
+        notice Styles 
+    ***************************** */
+    .notice {
+        padding: 0.5rem;
+        width: 70%;
+        border: solid white 0.15rem;
+        background: #7066775e;
+        position: relative;
+        margin: auto;
+    }
     
 }
 
@@ -1135,6 +1158,10 @@ input.btn.outline {
     
     h1 {
         font-size: 6em;
+    }
+    
+    #map {
+        width: 80%;
     }
 
 
