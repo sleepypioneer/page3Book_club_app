@@ -61,7 +61,7 @@
            <!-- show success message after book added is sent -->
             <p><strong> Thanks for adding </strong><?php echo $title." by ".$author." to ".$shelf; ?></p>
                    <hr>
-                    <p><a href="./addBook.php" class="btn">&laquo; Add another Book</a> <a href="./booklist.php" class="btn">&laquo; Go to Book List</a></p>
+                    <p><a href="./addBook.php" >&laquo; Add another Book</a> <a href="./booklist.php" >&laquo; Go to Book List</a></p>
 
     <?php
                 } else {
