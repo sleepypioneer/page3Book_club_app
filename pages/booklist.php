@@ -77,7 +77,7 @@
                             </td>
                         </tr>
                         <?php 
-                                    } /* end of php while loop */
+                                    } /* end of php for loop */
                                 ?>
 
                     </tbody>

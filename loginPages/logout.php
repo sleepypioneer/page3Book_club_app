@@ -8,7 +8,7 @@ include("../includes/headerWithoutNav.php");
 ?>
 
     <div class="form">
-          <h1>Thanks for stopping by</h1>
+          <h2>Thanks for stopping by</h2>
               
           <p><?= 'You have been logged out!'; ?></p>
            <div class="formBtn">
