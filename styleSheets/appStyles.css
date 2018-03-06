@@ -118,11 +118,21 @@ element {
 /* **************************** 
         General Styles 
 ***************************** */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
 body {
-    
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
 	background: #fdf5e8 url('../assets/imgs/black_paper.png');
 	/*color: #020a17; #fdf5e8;*/
-    margin: 0;
     font-size: 16px;
     line-height: 20px;
     color: floralwhite;
@@ -249,9 +259,13 @@ img.avatar.small {
 
 #exitIcon {
     display: block;
-    height: 2rem;
-    width: 2rem;
+    height: 3rem;
+    width: 3rem;
     position: relative;
+    background: #00000082;
+    padding: 0.4rem;
+    border-radius: 10%;
+    box-shadow: 0 0 1rem #742bf7, 0 0 3rem #b39fc1;
 }
 
 #exitSign {
@@ -297,8 +311,20 @@ hr {
     margin: 2rem auto;
 }
 
-
-
+/* **************************** 
+        Reminder Styles 
+***************************** */
+div#reminder {
+    width: 60%;
+    margin: auto;
+    line-height: 2rem;
+    position: fixed;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+    background: purple;
+    border: solid white 0.2rem;
+    border-radius: 1rem;
+}
 
 /* **************************** 
         Button Styles 
@@ -374,6 +400,8 @@ hr {
     margin: 0;
     padding: 1em 0;
     list-style: none;
+    display: flex;
+    flex-direction: column;
     
     transition: left 0.66667s ease;
     -webkit-transition: left 0.66667s ease;
@@ -382,12 +410,11 @@ hr {
 }
 
 #menu-icon {
-    position: absolute;
-    top: 23.5rem;
-    left: 100%;
-    width: 48px;
-    height: 48px;
-    padding: 3px 0;
+    position: relative;
+    height: fit-content;
+    top: 8.5rem;
+    left: 54%;
+    padding: 0.2rem;
     background: #3f3446;
     border-radius: 0 6px 6px 0;
     cursor: pointer;
@@ -399,7 +426,17 @@ hr {
 }
 
 #menu-icon:hover {
-     background: #2d3142;
+    background: #2d3142;
+}
+
+#main-nav.mobileMenuOpen {
+    left: 0%;
+    
+}
+
+#menu-icon.mobileMenuOpen {
+    left: 45%;
+    border-radius: 6px;
 }
 
 .icon-bar {
@@ -429,7 +466,6 @@ nav {
     display: flex;
     justify-content: space-around;
     font-size: x-large;
-    border-top: solid 0.25em black;
 }
 
 nav ul{
@@ -607,6 +643,9 @@ nav .active .icon-bar:last-child {
     justify-content: center;
 }
 
+#developerDetails li a {
+    padding:0;
+}
 
 #developerDetails li a img {
     height: 1.4em;
@@ -1027,6 +1066,7 @@ img.bookCover {
         padding: 0;
         /* width: 75%; */
         margin: 0 auto;
+        flex-direction: row;
     }
     
     #main-menu li {

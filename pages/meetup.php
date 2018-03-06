@@ -64,10 +64,10 @@
         <p>Hi <?php echo $userInfo['first_name']; ?> will you be attending the next meetup? </p>
         
         <div id="attendance">
-            <a href="./meetup.php?rsvp=True"><input type="checkbox" id="attending" name="attendance" value="Y">
+            <a href="./meetup.php?rsvp=True"><input type="checkbox" id="attending" class="checkbox" name="attendance" value="Y">
             <label for="attending"> &#10004;</label></a>
             
-            <a href="./meetup.php?rsvp=False"><input type="checkbox" id="notAttending" name="attendance" value ="N">
+            <a href="./meetup.php?rsvp=False"><input type="checkbox" id="notAttending" class="checkbox"  name="attendance" value ="N">
             <label for="notAttending"> X </label></a>
         </div>
         
@@ -104,7 +104,7 @@
 
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA24YTIiDMYVVx7uF0QisNDCAwLKtD4wco&callback=initMap"
     async defer></script>
-
+    <script type="text/javascript" src="../scripts/javaScript/checkboxLogic.js"></script>
 
 <?php 
         

@@ -14,4 +14,4 @@
     </div>
 </nav><!-- end of main navi -->
 
- <script type="text/javascript" src="/page3Book_club_app/scripts/javaScript/nav.js"></script>
+<script type="text/javascript" src="/page3Book_club_app/scripts/javaScript/nav.js"></script>

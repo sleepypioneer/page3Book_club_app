@@ -21,8 +21,12 @@
     $voted = mysqli_query($mysqli, "SELECT `voted` FROM users WHERE first_name='$userName'"); 
     $userVoted = mysqli_fetch_assoc($voted);
     
-    function submitVote(){
-        echo $userVoted['voted'];
+    if($userVoted['voted'] == 0){
+        include("../includes/reminder.php"); 
+    }
+
+    function submitVote($userVoted, $userName){
+        include('../scripts/php/dbconnection.php');
         if($userVoted['voted'] == 1){
             $query = "UPDATE users SET `voted`=0 WHERE first_name='$userName'";
             $userVoted['voted'] = 0;
@@ -35,7 +39,7 @@
     }
     
     if (isset($_GET['voted'])) {
-        submitVote();
+        submitVote($userVoted, $userName);
     }
 
 
@@ -51,16 +55,19 @@
         </p>
         
         <ul>
-            <?php for($i=0; $i <count($booklist); $i++){ ?>
+<?php for($i=0; $i <count($booklist); $i++){ ?>
             <li>
-                <a href='poll.php?voted=true'><input type="checkbox" class="pollVote" id="choice<?php echo $i; ?>" name="choice" value="<?php echo $booklist[$i]['title']; ?>" ></a>
-                <span><?php 
-                      if (strlen($booklist[$i]['voters'])> 0){
-                        echo count(explode(",", $booklist[$i]['voters']));
-                      } else {
-                        echo 0;
-                      } ?></span>
-                <label for="choice1">
+                <input type="checkbox" class="checkbox" id="choice<?php echo $i; ?>" name="choice" value="<?php echo $booklist[$i]['title']; ?>">
+                <span>
+<?php 
+  if (strlen($booklist[$i]['voters'])> 0){
+    echo count(explode(",", $booklist[$i]['voters']));
+  } else {
+    echo 0;
+  } 
+?>
+                </span>
+                <label for="choice<?php echo $i; ?>">
                     <em><?php echo $booklist[$i]['title']; ?></em> 
                     - <?php echo $booklist[$i]['author']; ?>
                     , <?php echo $booklist[$i]['synopsis']; ?>
@@ -78,34 +85,16 @@
         <hr>
     </div>
     </div><!-- content -->
-<script type="text/javascript">
-    function ckChange(e){
-        ckType = e.target;
-        var ckName = document.getElementsByName(ckType.name);
-        var checked = document.getElementById(ckType.id);
-
-        if (checked.checked) {
-          for(var i=0; i < ckName.length; i++){
-
-              if(!ckName[i].checked){
-                  ckName[i].disabled = true;
-              }else{
-                  ckName[i].disabled = false;
-              }
-          } 
-        }
-        else {
-          for(var i=0; i < ckName.length; i++){
-            ckName[i].disabled = false;
-          } 
-        }    
-    }
+<script type="text/javascript" src="../scripts/javaScript/checkboxLogic.js">
     
-    let pollSelections = document.querySelectorAll('.pollVote');
-    pollSelections.forEach(selection =>{
-        selection.addEventListener('click', ckChange);
+    
+    
+    
+    let options = document.querySelectorAll('.checkbox');
+    options.forEach(option =>{
+        option.addEventListener('click', sendVote);
     });
-    
+
 </script>
 
 <?php 
