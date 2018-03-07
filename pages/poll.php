@@ -20,12 +20,8 @@
     $userName = $_SESSION['first_name'];
     $voted = mysqli_query($mysqli, "SELECT `voted` FROM users WHERE first_name='$userName'"); 
     $userVoted = mysqli_fetch_assoc($voted);
-    
-    if($userVoted['voted'] == 0){
-        include("../includes/reminder.php"); 
-    }
 
-    function submitVote($userVoted, $userName){
+    function submitVote($userVoted, $userName, $choice){
         include('../scripts/php/dbconnection.php');
         if($userVoted['voted'] == 1){
             $query = "UPDATE users SET `voted`=0 WHERE first_name='$userName'";
@@ -35,14 +31,16 @@
             $userVoted['voted'] = 1;
         }
         $run = mysqli_query($mysqli, $query);
-       
+        echo "you voted";
     }
     
-    if (isset($_GET['voted'])) {
-        submitVote($userVoted, $userName);
+    if (isset($_GET['vote'])) {
+        submitVote($userVoted, $userName, $_GET['vote']);
     }
 
-
+    if($userVoted['voted'] == 0){
+        include("../includes/reminder.php"); 
+    }
 ?>
     <div >
         <div id="poll">
@@ -80,20 +78,33 @@
             
                 echo $userVoted['voted'];
             ?>
+            <li id="response"></li>
         </ul>
 
         <hr>
     </div>
     </div><!-- content -->
-<script type="text/javascript" src="../scripts/javaScript/checkboxLogic.js">
+<script type="text/javascript" src="../scripts/javaScript/checkboxLogic.js"></script>
+<script type="text/javascript" >   
+    function requestVote(e){
+        let vote = e.target.value;
+        let req = new XMLHttpRequest();
+        req.open("get", "./poll.php?vote=" + vote, true);
+        req.setRequestHeader("Conten-Type", "application/x-www-form-urlencoded");
+        req.onreadystatechange = evaluateVote;
+        req.send();
+    }
     
+    function evaluateVote(e) {
+        if(e.target.readyState == 4 && e.target.status == 200)
+            document.getElementById("response").innerHTML = e.target.responseText;
+    }
     
-    
-    
-    let options = document.querySelectorAll('.checkbox');
-    options.forEach(option =>{
-        option.addEventListener('click', sendVote);
+    let selections = document.querySelectorAll('.checkbox');
+    selections.forEach(selection =>{
+        selection.addEventListener('click', requestVote);
     });
+    
 
 </script>
 

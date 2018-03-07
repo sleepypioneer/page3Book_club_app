@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 02, 2018 at 03:05 PM
+-- Generation Time: Mar 07, 2018 at 12:20 PM
 -- Server version: 10.1.28-MariaDB
 -- PHP Version: 7.1.11
 
@@ -81,7 +81,7 @@ INSERT INTO `books` (`id`, `cover_image`, `title`, `author`, `rating`, `length`,
 (31, '', 'Female Sexualisation', 'Frida Haug', '5', 0, '', 'to-read', '', '0000-00-00', '0000-00-00', 'Array'),
 (32, '', 'Gender Trouble', 'Judith Butler', '5', 0, '', 'to-read', '', '0000-00-00', '0000-00-00', 'Array'),
 (33, '', 'There Are More Beautiful Things Than Beyonce', 'Morgan Parker', '5', 0, '', 'to-read', '', '0000-00-00', '0000-00-00', 'Array'),
-(34, '', 'Do Not Say We Have Nothing', 'Madeleine Thien ', '5', 0, '', 'Currently Reading', '', '0000-00-00', '0000-00-00', 'Array'),
+(34, '', 'Do Not Say We Have Nothing', 'Madeleine Thien ', '5', 0, '', 'Currently-Reading', '', '0000-00-00', '0000-00-00', 'Array'),
 (35, '', 'Why I am not a feminist: A feminist manifesto ', 'Jessa Crispin', '5', 0, '', 'to-read', '', '0000-00-00', '0000-00-00', 'Array'),
 (36, '', 'Persepolis', 'Marjane Satrapi', '5', 0, '', 'to-read', '', '0000-00-00', '0000-00-00', 'Array');
 
@@ -105,8 +105,7 @@ CREATE TABLE `notices` (
 INSERT INTO `notices` (`id`, `publisher`, `headline`, `content`) VALUES
 (1, 11, 'FREE BUTTONS! FREE CHOICE!', 'Wanted to share this button-making event ahead of the Bundestag debate on Paragraf 219a, a Nazi-era law that forbids doctors in Germany from offering information on abortions.<br><br>\r\n\r\n                                I can\'t make it due to work (booooo) but do help if you can and watch out for other events from the Buendnis!<br><br>\r\n\r\n                                The Bundestag debate is on February 22 and should be available as a livestream. If the Linke, SPD and Greens can get the liberal FDP to join the cause, they have a majority.<br><br>\r\n\r\n                                Next on the list is Paragraf 218, which criminalizes abortion (YES, ABORTION IS TECHNICALLY ILLEGAL IN GERMANY). But this is a marathon, not a sprint.<br><br>\r\n\r\n                                Tell your friends and join the campaign!'),
 (2, 10, 'Zipjet Advert', 'I saw this awful ad on the way home and it\'s found it really upsetting. Not sure why I\'m posting other than to say I hope this Zipjet campaign gets targeted with some witty defacing soon!<br><br>\r\n\r\n                                Rich white successful \'Chris concentrates on the important things in life - not washing or ironing\'<br><br>\r\n\r\n                                I feel like it\'s the ultimate double-barrelled privileged, patriarchal put down, laugh in the face of what has always been \'women\'s work\'... I know there\'s so much misogynist advertising out there but I think this one is so insidious!'),
-(3, 7, 'Still not voted for January\'s book? ', 'Roll up, roll up.... we\'ll announce the winner in the next days - to be discussed on 30th Jan! <br><br>\r\n\r\n                                Newbies - this is your chance to get involved and make your resolution to read more a reality!'),
-(8, 11, 'sd<gd<d', '<dg<dgsgs');
+(3, 7, 'Still not voted for January\'s book? ', 'Roll up, roll up.... we\'ll announce the winner in the next days - to be discussed on 30th Jan! <br><br>\r\n\r\n                                Newbies - this is your chance to get involved and make your resolution to read more a reality!');
 
 -- --------------------------------------------------------
 
@@ -123,18 +122,20 @@ CREATE TABLE `users` (
   `password` varchar(100) NOT NULL,
   `hash` varchar(32) NOT NULL,
   `active` tinyint(1) NOT NULL DEFAULT '0',
-  `voted` int(2) NOT NULL
+  `voted` int(2) NOT NULL,
+  `attending` int(2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `first_name`, `last_name`, `email`, `avatar`, `password`, `hash`, `active`, `voted`) VALUES
-(7, 'Jessica', 'Greene', 'onlinegurl@gmail.com', '../assets/imgs/avatar.JPG', '$2y$10$vX10VI0VlywRCZhU22n2Ne8ItPq19ewrAVrahnVelwAtY38Yr1M1m', '1595af6435015c77a7149e92a551338e', 1, 1),
-(10, 'Jessica', 'Greene', 'jessica0greene@gmail.com', '../assets/imgs/avatar.JPG\r\n', '$2y$10$egv.pV75LmG6pboMwX5yF.XkJ8xIAbHVDDhuueU.uDuC.w0tDpgEK', '6bc24fc1ab650b25b4114e93a98f1eba', 1, 1),
-(11, 'bob', 'klein', 'bob@klein.de', '../assets/imgs/avatar.JPG\r\n', '$2y$10$HGJnVxOx0YES4eS8UEYxiuKHHFo.Q5eXaWr6zbrq/FJ5BIhrIwIpO', '0a09c8844ba8f0936c20bd791130d6b6', 1, 0),
-(12, 'julia', 'bloggs', 'julia@bloggs.co.uk', '', '$2y$10$gkHNbxHNi6nCFG.hxzF3B.30WrnjnRSJY6thUf5uH6juTWJIBxvJe', 'c86a7ee3d8ef0b551ed58e354a836f2b', 0, 1);
+INSERT INTO `users` (`id`, `first_name`, `last_name`, `email`, `avatar`, `password`, `hash`, `active`, `voted`, `attending`) VALUES
+(7, 'Jessica', 'Greene', 'onlinegurl@gmail.com', '../assets/imgs/avatar.JPG', '$2y$10$vX10VI0VlywRCZhU22n2Ne8ItPq19ewrAVrahnVelwAtY38Yr1M1m', '1595af6435015c77a7149e92a551338e', 1, 1, 1),
+(10, 'Jessica', 'Greene', 'jessica0greene@gmail.com', '../assets/imgs/avatar.JPG\r\n', '$2y$10$egv.pV75LmG6pboMwX5yF.XkJ8xIAbHVDDhuueU.uDuC.w0tDpgEK', '6bc24fc1ab650b25b4114e93a98f1eba', 1, 1, 1),
+(11, 'bob', 'klein', 'bob@klein.de', '../assets/imgs/avatar.JPG\r\n', '$2y$10$HGJnVxOx0YES4eS8UEYxiuKHHFo.Q5eXaWr6zbrq/FJ5BIhrIwIpO', '0a09c8844ba8f0936c20bd791130d6b6', 1, 1, 0),
+(12, 'julia', 'bloggs', 'julia@bloggs.co.uk', '', '$2y$10$gkHNbxHNi6nCFG.hxzF3B.30WrnjnRSJY6thUf5uH6juTWJIBxvJe', 'c86a7ee3d8ef0b551ed58e354a836f2b', 0, 1, 0),
+(13, 'jessica', 'Greene', 'jessica@de.de', '', '$2y$10$pCMsy5bfLnWClTOUrh/vTuL.D8.iahedWeNnzgns1wQdt2ck0LN6K', 'b7892fb3c2f009c65f686f6355c895b5', 0, 0, 0);
 
 --
 -- Indexes for dumped tables
@@ -172,13 +173,13 @@ ALTER TABLE `books`
 -- AUTO_INCREMENT for table `notices`
 --
 ALTER TABLE `notices`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

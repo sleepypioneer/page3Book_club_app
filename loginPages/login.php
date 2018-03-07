@@ -21,8 +21,14 @@ else { // User exists
         
         // This is how we'll know the user is logged in
         $_SESSION['logged_in'] = true;
+        
+        // if admin go to admin, else go to home page as regular user
+        if ($_SESSION['first_name'] == "Admin"){
+            header("location: /page3Book_club_app/pages/home.php");
+        } else {
+            header("location: /page3Book_club_app/pages/home.php"); 
+        }
 
-        header("location: /page3Book_club_app/pages/home.php");
     }
     else {
         $_SESSION['message'] = "You have entered wrong password, try again!";
