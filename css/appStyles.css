@@ -1037,11 +1037,7 @@ img.bookCover {
     h1 {
         font-size: 6em;
     }
-    
-    .container {
-        width: 60%;
-        margin: auto;
-    }
+
     
     #map {
         position: relative;

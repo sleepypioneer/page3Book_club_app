@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="@sleepypioneer">
+    <meta name="date" content="2018-02-19T08:00:00+02:00">
+    <meta name="description" content="Book club app for planning meetups">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    
+    <title>Page 3</title>
+    
+    <link rel="stylesheet" type="text/css" href="css/appStyles.css">
+    
+    <!-- Add Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Astloch|Autour+One|Barrio|Bungee+Shade|Codystar|Diplomata|Faster+One|Finger+Paint|Gravitas+One|Griffy|Henny+Penny|IM+Fell+English+SC|Jolly+Lodger|Metal+Mania|Monofett|Mountains+of+Christmas|Nosifer|Varela+Round|Sofia|Trade+Winds|UnifrakturCook:700" rel="stylesheet">
+</head>
+<body>
+    <!-- header -->
+    <div id="header">
+        <!-- Banner -->
+        <div id="banner">
+            <div><h1>Page 3</h1></div>
+        </div><!-- banner -->
+
+        <!-- Log out -->
+        <div id="exitSign">
+            <a href="../loginPages/logout.php">
+              <div class="neon signOuter pink">
+                <div class="signInner">
+                  <span class="stroke-double stroke-single"></span>
+                </div>
+              </div>
+                <div id="exitIcon"><img src="assets/imgs/icons/Signout_font_awesome.svg"/></div>
+            </a>
+        </div>
+
+        <!-- nav -->
+        <nav id="main-nav">
+            <ul id="main-menu">
+                <li><a href="#home" class="navBtn selected">Home</a></li>
+                <li><a href="#booklist" class="navBtn">Books</a></li>
+                <li><a href="#meetup" class="navBtn">Meetup</a></li>
+                <li><a href="#poll" class="navBtn">Monthly Poll</a></li>
+                <li><a href="#noticeboard" class="navBtn">Notice Board</a></li>
+            </ul>
+            <div id="menu-icon">
+                <div class="icon-bar"></div>
+                <div class="icon-bar"></div>
+                <div class="icon-bar"></div>
+            </div>
+        </nav><!-- end of main navi -->
+    </div>
+    <!-- end of header -->
+    
+    
+    <!-- content -->
+    <div id="content">
+        <!-- home -->
+        <div class="container" id="home">
+            <div class="manifest">   
+                <h2>Hello and welcome! Here's how it works:</h2>
+                <h4>PLANNING YOUR MONTHLIES</h4>
+                <p>We want to meet on the last Tuesday of every month, unless otherwise planned.</p>
+                <hr>
+                <h4>DEMOCRACY IN ACTION</h4>
+                <p>To decide which book is up the following month, we'll post a FB poll one week before each meeting. The shortlist for that poll will be selected from an ever-growing list of recommendations. If you have a book you'd like considered, just add it to the group document.</p>
+                <hr>
+                <h4>DREAMING BIG</h4>
+                <p>Once we establish a group of regulars, we'd like to contact bookshops to see if one will host us. Perhaps it could offer discounts in return for monthly orders. We're still nailing down the specifics, so any other ideas, just let us know.</p>
+                <hr>
+                <h4>PAGE WHO?</h4>
+                <p>Our current name is a kind of working title. As a cultural reference to boobs in UK tabloids, it's very British-specific. We'd be happy to change it to something more universal. Again, suggestions welcome!</p>
+                <hr>
+                <h4>WORDS AND ACTIONS</h4>
+                <p>We're all into feminism, fairness and equality. So as well as a book club, this can also be a platform for spreading causes and organizing activism. Please feel free to post events or articles that you think might interest or galvanise your fellow members!</p>
+                <hr>
+                <h4>SAFE SPACE OR FREE-FOR-ALL?</h4>
+                <p>Our only requirements for new members are: 1) an open mind and 2) an interest in women's rights. We don't care whether you have a vagina or not, whether you loathe Germaine Greer, or what your political stance is on waxing. We're just looking for titillating and respectful discussion!</p>
+                <hr>
+
+            </div><!-- manifest -->
+        </div><!-- home -->
+    
+    
+    
+        <!-- BookList -->
+        <div class="container" id="booklist">
+            <hr>
+            <p>
+                Please feel free to add suggestions! We’ll use this list to create the monthly poll, trying to give a spread of biography, fiction and other genres each time.<br><br>
+                Also, please do think outside the box; it needn’t be overtly feminist each time. We can also consider stories simply about women’s lives, perhaps shedding light on some badass women that history might have otherwise forgotten, as well as their LGBTQIA allies.
+                <br><br><br>
+            </p>
+            <hr>
+            <div id="searchAndAdd">
+                <div>
+                    <a href="./addBook.php"><button class="btn outline">Add a book</button></a>
+                </div>
+                
+                <div id="searchWithClear">
+                    <form id="searchBox">
+                        <input type="text" placeholder="Search Title or Author" class="search">
+                    </form>
+                    <div class="clear">X</div>
+                </div>                      
+
+            </div><!-- Search and Add -->
+
+
+            <ul id="books">
+                <li id="list-header">
+                    <span class="title">Title<button><div class="triangle-down"></div></button></span>
+                    <span class="author">Author<button><div class="triangle-down"></div></button></span>
+                    <span class="rating">Rating<button><div class="triangle-down"></div></button></span>
+                    <span class="shelf">Shelf<button><div class="triangle-down"></div></button></span>
+                </li>
+                
+                <!-- Book -->
+                <li>
+                    <div class="summary clearfix">
+                        <img src="images/user.png" width="100" height="100" alt="Standard-User-Image">
+                        <span class="short-data">
+                            <span class="title"></span>
+                            <span class="author"></span>
+                            <span class="rating"></span>
+                            <span class="shelf"></span>
+                        </span>
+                        <span class="actions">
+                            <button type="button" class="open-details"><span class="fas fa-info"></span></button> 
+                            <!-- Admin only
+                                <button type="button" class="edit-datas"><span class="fas fa-edit"></span></button> 
+                                <button type="button" class="delete-entry"><span class="fas fa-trash"></span></button>
+                            -->
+                        </span>
+                    </div>
+                    <div class="details clearfix">
+                        <div class="details-content">
+                            <figure class="details-header">
+                                <div class="cover-img">
+                                    <img src="i" width="200" height="200" alt="Book cover Image">
+                                </div>
+                                <figcaption class="details-name">
+                                    <span class="details-title"></span>
+                                    <span class="details-author"></span>
+                                    <span class="details-rating"></span>
+                                    <span class="details-shelf"></span>
+                                    <span class="details-length"></span>
+                                </figcaption>
+                            </figure>
+                            <table class="details-data">
+                                <tr class="space-bottom">
+                                    <th>Synopsis</th>
+                                    <td></td>
+                                    </tr><tr>
+                                </tr>
+                                <tr class="space-bottom">
+                                    <th>Date added</th>
+                                    <td></td>
+                                    <th>Date Read</th> <!-- only shows if it has been read -->
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>Amazon Link</th>
+                                    <td></td>
+                                </tr>
+                            </table>
+                            <div class="details-actions"> 
+                                <button type="button" class="details-close"><span class="fas fa-times"></span></button> 
+                                <button type="button" class="edit-datas"><span class="fas fa-edit"></span></button> 
+                                <button type="button" class="delete-entry"><span class="fas fa-trash"></span></button>
+                            </div>
+                        </div>
+                    </div>
+                </li><!-- Book -->
+            </ul> <!-- Books -->
+            
+            <form method="post" action="" id="contactForm">
+                <label for="title">Book Title<span class="required">*</span></label>
+                <input type="text" id="title" name="title">
+
+                <label for="author">Author<span class="required">*</span></label>
+                <input type="text" id="author" name="author">
+
+                <label for="coverImageUrl">Cover Image Url</label>
+                <input type="text" id="coverImageUrl" name="coverImageUrl">
+
+                <label for="amazonLink">Amazon link... leave blank for none.</label>
+                <input type="text" id="amazonLink" name="amazonLink">
+
+                <label for="bookLength">Length of book (no. of pages)</label>
+                <input type="text" id="bookLength" name="bookLength">
+
+                <label for="synopsis">Synopsis of book.</label>
+                <textarea id="synopsis" name="synopsis"></textarea>
+
+                <input type="radio" id="shelf1" name="shelf" value="To Read" checked="checked">
+                <label class="radio" for="shelf1"><em>To Read</em></label>
+
+                <input type="radio" id="shelf2" name="shelf" value="Currently Reading">
+                <label class="radio" for="shelf2"><em>Currently Reading</em></label>
+
+                <input type="radio" id="shelf3" name="shelf" value="Read">
+                <label class="radio" for="shelf3"><em>Read</em></label>
+
+                <input type="submit" class="btn outline" name="addBook_submit" value="Add Book">
+            </form>
+            
+        </div> <!-- BookList -->
+    
+    
+    
+        <!-- meetup -->
+        <div class="container" id="meetup">
+            <hr>
+            <h2>BOOK CLUB 2018 <span id="edition">#2</span></h2><h4><span id="tagline"></span></h4>
+
+            <div style="text-align: center;">
+                <img src="/page3Book_club_app/assets/imgs/do_not_say_we_have_nothing.jpg" alt="do_not_say_we_have_nothing" class="bookCover" />
+            </div>
+
+            <p>
+                We will be reading <span>Title</span>by <span>Author</span><br>
+                <span>sypnosis</span><br>
+                We'll be discussing it at the meeting on <span id="meetupDate">DATE</span> at <span class="meetupLocation">Location</span>
+            </p>
+            
+            <hr>
+            
+            <img src="userAvatar" class="avatar small"/>
+            <p>Hi <span class="userName">user name</span> will you be attending the next meetup?</p>
+
+            <div id="attendance">
+                <a href="./meetup.php?rsvp=True"><input type="checkbox" id="attending" class="checkbox" name="attendance" value="Y">
+                <label for="attending"> &#10004;</label></a>
+
+                <a href="./meetup.php?rsvp=False"><input type="checkbox" id="notAttending" class="checkbox"  name="attendance" value ="N">
+                <label for="notAttending"> X </label></a>
+            </div>
+
+            <h3>Attending:</h3>
+            <div id="attendees" class="centerFlex"></div>
+
+            <h3>Getting there:</h3>
+            <p><span class="meetupLocation">Location</span></p>
+
+            <div id="map"></div>
+
+        </div><!-- meetup -->
+    
+        <!-- Google Maps Scripts -->
+        <script type="text/javascript">
+          function initMap() {
+            var uluru = {lat: 52.47147762686464, lng: 13.433457536492938};
+            var map = new google.maps.Map(document.getElementById('map'), {
+              zoom: 14,
+              center: uluru
+            });
+            var marker = new google.maps.Marker({
+              position: uluru,
+              map: map
+            });
+          }
+        </script>
+
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA24YTIiDMYVVx7uF0QisNDCAwLKtD4wco&callback=initMap"
+        async defer></script>
+    
+    
+    
+        <!-- poll -->
+        <div class="container" id="poll">
+            <hr>
+            <h2>*** MONTH BOOK POLL***</h2>
+            <p> <span class="welcomeMessage"> Hello Readers!</span><br><br>
+                <span id="pollMessage" class="message">
+                    I hope January has given you enough cold evenings to curl up and finish 'Do Not Say We Have Nothing'. It's a chunker and I'm certainly not finished. <br>
+                    Below are the book choices for February. I just want to flag that Baise Moi includes some explicit and violent rape scenes. If anyone who wants to read this month is uncomfortable reading and then as a group discussing that, then please send me or Rachel a message, and no questions asked we will replace it with another choice. <br>
+                    We think sensitive topics are important to address and discuss but would rather everyone felt welcome and comfortable...there are enough other books on our list!
+                </span>
+            </p>
+
+            <ul id="pollBooks">
+                <li class="pollBook">
+                    <input type="checkbox" class="checkbox" id="choice" name="choice" value="title">
+                    <span class="noVotes"></span>
+                    <label for="choice<?php echo $i; ?>">
+                        <em>Title</em> 
+                            Author
+                            synopsis
+                    </label>
+                </li>
+            </ul>
+        </div><!-- poll -->
+    
+    
+    
+        <!-- notices -->
+        <div class="container" id="noticeboard">
+            <hr>
+            <!-- Button to open the modal new notice form -->
+            <a href="#addNotice"><button class="btn outline">Add Notice</button></a>
+            <hr>
+            
+            <ul id="noticeList">
+                <!-- notice -->
+                <li class="notice">
+                    <h6 class="noticePublisher">User name </h6>
+                    <img src="avatar" class="avatar small">
+                    <h3 class="noticeHeader">headline</h3>
+                    <p class="noticeContent">
+                        content
+                    </p>
+                </li><!-- notice -->
+                <hr>
+            
+            </ul>
+
+            <div id="addNotice">
+                <form method="post" action="" id="contactForm">
+                    <label for="headline">Headline<span class="required">*</span></label>
+                    <input type="text" id="headline" name="headline">
+
+                    <label for="content">Content<span class="required">*</span></label>
+                    <input type="text" id="content" name="content">
+
+                    <input type="submit" class="btn outline" name="addNotice_submit" value="Add Notice">
+                </form>
+            </div>
+            
+        </div><!-- notices -->
+
+        <!-- Script for Module popup -->
+        <script type="text/javascript">
+            // Get the modal
+            var modal = document.getElementById('addNotice');
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        </script>
+    </div>
+    <!-- end of content -->
+    
+    
+    <!-- footer -->
+    <div id="footer">
+        <!-- developerDetails -->
+        <div id="developerDetails">
+            <small>&copy;<span id="yearNow">2018</span> SLEEPYPIONEER</small>
+            <ul>
+                <li>
+                    <a href="https://github.com/sleepypioneer" target="_blank"> <img src="assets/imgs/icons/gitIcon.svg"></a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/sleepypioneer" target="_blank"> <img src="assets/imgs/icons/twitterIcon.svg"></a></li>
+                <li>
+                    <a href="https://www.linkedin.com/in/jessica0greene/" target="_blank"> <img src="assets/imgs/icons/linkedinIcon.svg"></a></li>
+            </ul>
+        </div><!-- developerDetails --> 
+    </div>
+    <!-- end of footer -->
+    
+    
+<script type="text/javascript" src="scripts/javaScript/nav.js"></script>   
+<script type="text/javascript" src="scripts/javaScript/checkboxLogic.js"></script>   
+<script type="text/javascript" src="scripts/javaScript/inputs.js"></script>
+<script type="text/javascript">
+    let navBtns = document.getElementsByClassName('navBtn');
+    
+    function selectedPage(e){
+        for(i=0; i < navBtns.length; i++){
+            navBtns[i].classList.remove('selected');
+        }
+        e.target.classList.add('selected');
+    }
+    
+    for(i=0; i < navBtns.length; i++){
+        navBtns[i].addEventListener('click', selectedPage);
+    }
+    
+</script>
+</body>
+</html>
