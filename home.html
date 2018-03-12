@@ -56,7 +56,8 @@
     <!-- content -->
     <div id="content">
         <!-- home -->
-        <div class="container" id="home">
+        <div class="container" id="top">
+            <a id="home" class="anchor"></a>
             <div class="manifest">   
                 <h2>Hello and welcome! Here's how it works:</h2>
                 <h4>PLANNING YOUR MONTHLIES</h4>
@@ -84,7 +85,8 @@
     
     
         <!-- BookList -->
-        <div class="container" id="booklist">
+        <div class="container" >
+            <a id="booklist" class="anchor"></a>
             <hr>
             <p>
                 Please feel free to add suggestions! We’ll use this list to create the monthly poll, trying to give a spread of biography, fiction and other genres each time.<br><br>
@@ -94,12 +96,12 @@
             <hr>
             <div id="searchAndAdd">
                 <div>
-                    <a href="./addBook.php"><button class="btn outline">Add a book</button></a>
+                    <a href="./addBook.php"><button id="addBookBtn" class="btn outline">Add a book</button></a>
                 </div>
                 
                 <div id="searchWithClear">
                     <form id="searchBox">
-                        <input type="text" placeholder="Search Title or Author" class="search">
+                        <input type="text" placeholder="Search Title or Author" id="search" class="search">
                     </form>
                     <div class="clear">X</div>
                 </div>                      
@@ -115,10 +117,10 @@
                     <span class="shelf">Shelf<button><div class="triangle-down"></div></button></span>
                 </li>
                 
-                <!-- Book -->
+                <!-- Book Card -->
                 <li>
                     <div class="summary clearfix">
-                        <img src="images/user.png" width="100" height="100" alt="Standard-User-Image">
+                        <img src="assets/imgs/defaultBook.jpg" width="100" height="100" alt="Standard-Book-Image">
                         <span class="short-data">
                             <span class="title"></span>
                             <span class="author"></span>
@@ -137,14 +139,14 @@
                         <div class="details-content">
                             <figure class="details-header">
                                 <div class="cover-img">
-                                    <img src="i" width="200" height="200" alt="Book cover Image">
+                                    <img src="assets/imgs/defaultBook.jpg" width="200" height="200" alt="Book cover Image">
                                 </div>
                                 <figcaption class="details-name">
-                                    <span class="details-title"></span>
-                                    <span class="details-author"></span>
-                                    <span class="details-rating"></span>
-                                    <span class="details-shelf"></span>
-                                    <span class="details-length"></span>
+                                    <span class="details title"></span>
+                                    <span class="details author"></span>
+                                    <span class="details rating"></span>
+                                    <span class="details shelf"></span>
+                                    <span class="details length"></span>
                                 </figcaption>
                             </figure>
                             <table class="details-data">
@@ -174,7 +176,7 @@
                 </li><!-- Book -->
             </ul> <!-- Books -->
             
-            <form method="post" action="" id="contactForm">
+            <form method="post" action="" id="addBookForm">
                 <label for="title">Book Title<span class="required">*</span></label>
                 <input type="text" id="title" name="title">
 
@@ -210,7 +212,8 @@
     
     
         <!-- meetup -->
-        <div class="container" id="meetup">
+        <div class="container">
+            <a id="meetup" class="anchor"></a>
             <hr>
             <h2>BOOK CLUB 2018 <span id="edition">#2</span></h2><h4><span id="tagline"></span></h4>
 
@@ -268,7 +271,8 @@
     
     
         <!-- poll -->
-        <div class="container" id="poll">
+        <div class="container">
+            <a id="poll" class="anchor"></a>
             <hr>
             <h2>*** MONTH BOOK POLL***</h2>
             <p> <span class="welcomeMessage"> Hello Readers!</span><br><br>
@@ -295,10 +299,11 @@
     
     
         <!-- notices -->
-        <div class="container" id="noticeboard">
+        <div class="container">
+            <a id="noticeboard" class="anchor"></a>
             <hr>
             <!-- Button to open the modal new notice form -->
-            <a href="#addNotice"><button class="btn outline">Add Notice</button></a>
+            <a href="#addNotice"><button id="addNotice" class="btn outline">Add Notice</button></a>
             <hr>
             
             <ul id="noticeList">
@@ -316,7 +321,7 @@
             </ul>
 
             <div id="addNotice">
-                <form method="post" action="" id="contactForm">
+                <form method="post" action="" id="addNoticeForm">
                     <label for="headline">Headline<span class="required">*</span></label>
                     <input type="text" id="headline" name="headline">
 
@@ -366,7 +371,7 @@
     
 <script type="text/javascript" src="scripts/javaScript/nav.js"></script>   
 <script type="text/javascript" src="scripts/javaScript/checkboxLogic.js"></script>   
-<script type="text/javascript" src="scripts/javaScript/inputs.js"></script>
+<script type="text/javascript" src="scripts/javaScript/main.js"></script>
 <script type="text/javascript">
     let navBtns = document.getElementsByClassName('navBtn');
     

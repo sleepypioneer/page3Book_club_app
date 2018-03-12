@@ -348,6 +348,21 @@ div#reminder {
 }
 
 /* **************************** 
+        Header Styles 
+***************************** */
+
+div#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 4;
+}
+
+div#top {
+    margin-top: 25rem;
+}
+
+/* **************************** 
         Main Banner Styles 
 ***************************** */
 
@@ -514,8 +529,6 @@ nav ul li a:active {
 }
 
 .selected {
-    -moz-border-radius: 5px 0px 0px 0px;
-    border-radius: 5px 0px 0px 0px;
     background: #2D3142;
 }
 
@@ -525,7 +538,6 @@ nav ul li a:active {
     top: 0;
     right: 0;
     border-style: solid;
-    background: #020a17;
     -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.3), -1px 1px 1px rgba(0,0,0,0.2);
     -moz-box-shadow: 0 1px 1px rgba(0,0,0,0.3), -1px 1px 1px rgba(0,0,0,0.2);
     box-shadow: 0 1px 1px rgba(0,0,0,0.3), -1px 1px 1px rgba(0,0,0,0.2);
@@ -565,6 +577,20 @@ nav .active .icon-bar:last-child {
     transform: rotate(-45deg);
     position: relative;
     top: -28%;
+}
+
+/* *************************************** 
+        Container Styles 
+**************************************** */
+
+.container {
+    position: relative;
+    margin-bottom: 6rem;
+}
+
+.anchor {
+    position:absolute; 
+    top: -20rem;
 }
 
 /* *************************************** 
